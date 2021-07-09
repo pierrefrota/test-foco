@@ -10,6 +10,7 @@ export function UserDetails() {
   let { id } = useParams();
 
   const [user, setUser] = useState({});
+  const [users, setUsers] = useState([]);
 
   useEffect(() => {
     // api
@@ -29,6 +30,8 @@ export function UserDetails() {
     const localUsers = await localStorage.getItem("users");
     const localUsersFormatted = await JSON.parse(localUsers);
 
+    setUsers(localUsersFormatted);
+
     const filteredUser = localUsersFormatted.filter((user) => user.id === id);
 
     console.log(filteredUser);
@@ -38,15 +41,26 @@ export function UserDetails() {
   async function deleteUserById(id) {
     const answer = window.confirm("Deletar usuário?");
     if (answer) {
-      api
-        .delete(`/users/${id}`)
-        .then((response) => {
-          toast.success("Usuário deletado com sucesso.");
-          history.push("/");
-        })
-        .catch((err) => {
-          toast.error("Ocorreu um erro ao deletar o usuário.");
-        });
+      // api
+      //   .delete(`/users/${id}`)
+      //   .then((response) => {
+      //     toast.success("Usuário deletado com sucesso.");
+      //     history.push("/");
+      //   })
+      //   .catch((err) => {
+      //     toast.error("Ocorreu um erro ao deletar o usuário.");
+      //   });
+
+      const filtered = users.filter((user) => user.id !== id);
+
+      localStorage.setItem("users", JSON.stringify(filtered));
+
+      toast.success("Redirecionando para pagina inicial.");
+      toast.success("Usuário deletado com sucesso.");
+
+      setTimeout(() => {
+        history.push("/");
+      }, 3000);
     } else {
       //
     }

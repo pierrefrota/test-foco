@@ -167,7 +167,13 @@ export function RegisterUser() {
             },
           ])
         );
-        history.push("/");
+
+        toast.success("Usuário cadastrado com sucesso.");
+        toast.success("Redirecionando para pagina inicial.");
+
+        setTimeout(() => {
+          history.push("/");
+        }, 3000);
       } else {
         await localStorage.setItem(
           "users",
@@ -187,9 +193,12 @@ export function RegisterUser() {
             },
           ])
         );
-        history.push("/");
+        setTimeout(() => {
+          history.push("/");
+        }, 3000);
+        toast.success("Usuário cadastrado com sucesso.");
+        toast.success("Redirecionando para pagina inicial.");
       }
-      toast.success("Usuário cadastrado com sucesso.");
     } catch (error) {
       console.log(error.message);
       toast.success("Houve um erro ao cadastrar o usuário.");
@@ -219,7 +228,6 @@ export function RegisterUser() {
           <form>
             <div className={styles.info}>
               <span className={styles.errorMessage}>Nome*</span>
-
               <input
                 type="text"
                 onChange={(text) => setFullName(text.target.value)}
