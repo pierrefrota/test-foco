@@ -6,7 +6,8 @@ Este projeto foi desenvolvido com [Create React App](https://github.com/facebook
 
 Na pasta do projeto execute:
 
-### `yarn start`
+- `yarn`
+- `yarn start`
 
 ## Funcionalidades
 
