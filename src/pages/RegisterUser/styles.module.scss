@@ -1,0 +1,150 @@
+main {
+  .container {
+    display: flex;
+    max-width: 1120px;
+    margin: 0 auto;
+
+    .content {
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 540px;
+
+      @media (max-width: 767px) {
+        padding: 1rem;
+      }
+
+      h2 {
+        color: var(--text);
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      form {
+        max-width: 540px;
+        display: flex;
+        flex-direction: column;
+
+        input {
+          width: 100%;
+          padding: 0 1.5rem;
+          height: 3rem;
+          border: 1px solid var(--gray-100);
+          border-radius: 0.25rem;
+          background: #f0f2f7;
+
+          color: var(--text);
+          margin-top: 0.5rem;
+
+          &::placeholder {
+            color: var(--gray-300);
+          }
+
+          @media (max-width: 767px) {
+            padding: 0 1rem;
+          }
+        }
+
+        .info {
+          .errorMessage {
+            color: var(--red);
+            font-size: 0.75rem;
+            margin-top: 0.25rem;
+          }
+
+          .errorMessageLeft {
+            text-align: left;
+          }
+          .errorMessageRight {
+            text-align: right;
+          }
+          .infoRow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+
+            @media (max-width: 767px) {
+              flex-direction: column;
+              gap: 0;
+            }
+          }
+        }
+
+        .address {
+          .errorMessage {
+            color: var(--red);
+            font-size: 0.75rem;
+            margin-top: 0.25rem;
+          }
+          .errorMessageLeft {
+            color: var(--red);
+            font-size: 0.75rem;
+            margin-top: 0.25rem;
+            text-align: left;
+          }
+          .errorMessageRight {
+            color: var(--red);
+            font-size: 0.75rem;
+            margin-top: 0.25rem;
+            text-align: right;
+          }
+          .addressRow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+
+            .addressNumber {
+              width: 30%;
+
+              @media (max-width: 767px) {
+                width: 40%;
+              }
+            }
+          }
+        }
+
+        .buttonSubmit {
+          width: 100%;
+          padding: 0 1.5rem;
+          height: 3rem;
+          background: var(--red);
+          color: var(--white);
+          font-weight: 600;
+          border-radius: 0.25rem;
+          border: 0;
+          margin-top: 1.5rem;
+
+          transition: filter 0.2s;
+
+          &:hover {
+            filter: brightness(0.8);
+          }
+        }
+
+        .buttonBack {
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+          width: 100%;
+          padding: 0 1.5rem;
+          height: 3rem;
+          background: var(--white);
+          color: var(--text);
+          font-weight: 600;
+          border-radius: 0.25rem;
+          border: 0;
+          margin-top: 1.5rem;
+
+          transition: filter 0.2s;
+
+          &:hover {
+            filter: brightness(0.8);
+          }
+        }
+      }
+    }
+  }
+}

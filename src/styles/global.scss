@@ -1,0 +1,36 @@
+:root {
+  --yellow: #f8a71a;
+  --red: #a41313;
+  --brown: #3a1213;
+  --black: #000000;
+  --white: #f8f8f8;
+  --text: #29292e;
+
+  --gray-line: #dcdde0;
+  --gray-100: #e1e1e6;
+  --gray-300: #a8a8b3;
+  --gray-800: #292929;
+  --gray-900: #121214;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--white);
+  color: var(--text);
+}
+
+body,
+input,
+button,
+textarea {
+  font: 400 1rem "Poppins", sans-serif;
+
+  @media (max-width: 767px) {
+    font: 400 87% "Poppins", sans-serif;
+  }
+}

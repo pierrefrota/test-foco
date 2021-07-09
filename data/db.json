@@ -1,0 +1,17 @@
+{
+  "users": [
+    {
+      "id": "2a547421-c0c5-410d-bf47-2e3254be1d00",
+      "name": "Pierre Frota",
+      "cpf": "88899977745",
+      "phone": "77999457391",
+      "email": "pierrefrota@gmail.com",
+      "cep": "46400000",
+      "locale": "teste",
+      "number": "99",
+      "bairro": "Teste",
+      "city": "Teste",
+      "uf": "ba"
+    }
+  ]
+}

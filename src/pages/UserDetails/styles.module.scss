@@ -1,0 +1,58 @@
+.content {
+  padding: 1rem;
+
+  .userContainer {
+    .card {
+      display: flex;
+      flex-direction: column;
+      border-bottom: 1px solid var(--gray-100);
+      padding: 0.5rem 1rem;
+
+      .userInfo {
+        border-bottom: 1px solid var(--gray-100);
+
+        span {
+          display: block;
+        }
+
+        p {
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          width: 90%;
+          overflow: hidden;
+        }
+      }
+      .address {
+        margin-top: 1rem;
+
+        span {
+          display: block;
+        }
+      }
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      button {
+        margin-top: 1rem;
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--white);
+        background: var(--red);
+        border: 0;
+        height: 3rem;
+        padding: 0 0.5rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+
+        span {
+          color: var(--white);
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
