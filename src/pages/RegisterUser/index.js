@@ -227,7 +227,6 @@ export function RegisterUser() {
 
           <form>
             <div className={styles.info}>
-              <span className={styles.errorMessage}>Nome*</span>
               <input
                 type="text"
                 onChange={(text) => setFullName(text.target.value)}
