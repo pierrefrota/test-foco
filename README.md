@@ -2,7 +2,7 @@
 
 ### Confira o projeto final:
 
-`https://teste-foco.netlify.app/`
+https://teste-foco.netlify.app/
 
 
 Este projeto foi desenvolvido com [Create React App](https://github.com/facebook/create-react-app).
